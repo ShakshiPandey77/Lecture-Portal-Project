@@ -11,7 +11,7 @@ import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import BookIcon from '@material-ui/icons/Book';
 import VideoIcon from '@material-ui/icons/Videocam';
-import PersonIcon from '@material-ui/icons/Person';
+// import PersonIcon from '@material-ui/icons/Person';
 import DesktopIcon from '@material-ui/icons/DesktopWindows';
 import HelpIcon from '@material-ui/icons/Help';
 
@@ -35,12 +35,12 @@ export const mainListItems = (
       </ListItemIcon>
       <ListItemText primary="Video" />
     </ListItem>
-    <ListItem button>
+    {/* <ListItem button>
       <ListItemIcon>
         <PersonIcon />
       </ListItemIcon>
       <ListItemText primary="My Students" />
-    </ListItem>
+    </ListItem> */}
     <ListItem button>
       <ListItemIcon>
         <DesktopIcon />
