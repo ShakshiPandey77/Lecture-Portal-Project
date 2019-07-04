@@ -1,25 +1,15 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import DeptDashboard from './components/Dept/DeptDashboard';
+import AdminDashboard from './components/Admin/AdminDashboard';
+import LectureDashboard from './components/Lecturer/LectureDashboard';
+import StudentDashboard from './components/Student/StudentDashboard';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StudentDashboard/>
+  </div>
   );
 }
 
