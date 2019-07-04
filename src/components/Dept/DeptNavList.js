@@ -13,28 +13,28 @@ export const mainListItems = (
   <div>
     <ListItem button>
       <ListItemIcon>
-        <DashBoardIcon color="primary"/>
+        <DashBoardIcon/>
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
 
     <ListItem button>
       <ListItemIcon>
-        <BookIcon color="primary" />
+        <BookIcon />
       </ListItemIcon>
       <ListItemText primary="Course Catalog" />
     </ListItem>
     
     <ListItem button>
       <ListItemIcon>
-        <DesktopIcon color="primary"/>
+        <DesktopIcon/>
       </ListItemIcon>
       <ListItemText primary="Transfer Session" />
     </ListItem>
     
     <ListItem button>
       <ListItemIcon>
-        <ScheduleIcon color="primary"/>
+        <ScheduleIcon/>
       </ListItemIcon>
       <ListItemText primary="Course Catalog" />
     </ListItem>
@@ -43,7 +43,7 @@ export const mainListItems = (
     
     <ListItem button>
       <ListItemIcon>
-        <HelpIcon color="primary"/>
+        <HelpIcon />
       </ListItemIcon>
       <ListItemText primary="Help and Support" />
     </ListItem>
