@@ -28,8 +28,8 @@ export const mainListItems = (
       <ListItemIcon>
         <Help />
       </ListItemIcon>
-      <ListItemText primary="Help" />
-
+      <ListItemText primary="Help and Support" />
+    </ListItem>
 
   </div>
 );
