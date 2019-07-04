@@ -36,7 +36,7 @@ export const mainListItems = (
       <ListItemIcon>
         <ScheduleIcon/>
       </ListItemIcon>
-      <ListItemText primary="Course Catalog" />
+      <ListItemText primary="Add Schedule"/>
     </ListItem>
 
     <Divider />

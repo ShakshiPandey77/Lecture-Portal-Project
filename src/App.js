@@ -8,7 +8,7 @@ import StudentDashboard from './components/Student/StudentDashboard';
 function App() {
   return (
     <div className="App">
-    <StudentDashboard/>
+    <DeptDashboard/>
   </div>
   );
 }
