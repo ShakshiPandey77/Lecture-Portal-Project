@@ -14,7 +14,7 @@ import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
+//import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -29,15 +29,7 @@ import Logout from '@material-ui/icons/Input';
 // import Chart from './Chart';
 // import Deposits from './Deposits';
 // import Orders from './Orders';
-import { mainListItems, secondaryListItems } from './StudentNavList';
-
-function MadeWithLove() {
-return (
-<Typography variant="body2"  align="center">
-  {'CODE I/O BMSCE. @ All Rights Reserved'}
-</Typography>
-);
-}
+import { mainListItems} from './StudentNavList';
 
 const drawerWidth = 240;
 
@@ -227,7 +219,7 @@ return (
         <MenuIcon />
       </IconButton>
       <Typography component="h1" variant="h5" color="inherit" noWrap className={classes.title}>
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/87/BMS_College_of_Engineering.svg/220px-BMS_College_of_Engineering.svg.png" width="40px" align="left" />
+        <img src="./images/bmslogo.png" alt="Bms logo" width="40px" align="left" />
        <div align="left" className={classes.text_title}>&nbsp;BMS LRS</div>
       </Typography>
       
@@ -296,8 +288,6 @@ return (
     <Typography class={classes.admin}>Student</Typography>
     <Divider />
     <List>{mainListItems}</List>
-     {/* <Divider />
-    <List>{secondaryListItems}</List>  */}
   </Drawer> 
 <main className={classes.content}>
     <div className={classes.appBarSpacer} />
