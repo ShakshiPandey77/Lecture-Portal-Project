@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { Select,Input,MenuItem,FormHelperText, FormControl} from '@material-ui/core';
-import {Link as Loc} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 
 
 const useStyles = makeStyles(theme => ({
@@ -53,7 +53,8 @@ export default function Signin() {
   const classes = useStyles();
 
   const [values, setValues] = React.useState({
-    type : 'student'
+    type : 'student',
+    toDashboard  : false
   });
 
   const handleChange = (event) => {
@@ -63,6 +64,19 @@ export default function Signin() {
     }));
   };
 
+  const handleSubmit = () => {
+    setValues(oldValues => ({
+      ...oldValues,
+      toDashboard : true
+    }))
+  };
+
+  if(values.toDashboard === true){
+    return (
+      <Redirect to= {'/'+values.type} />
+    );
+  }
+  
   return (
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
@@ -84,7 +98,7 @@ export default function Signin() {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-          <form className={classes.form}>
+          <form className={classes.form} onSubmit={handleSubmit}>
             <TextField
               variant="outlined"
               margin="normal"
@@ -120,17 +134,15 @@ export default function Signin() {
               </Select>
               <FormHelperText>Select user type</FormHelperText>
             </FormControl>
-            <Loc to={"/student"}>
-              <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                color="primary"
-                className={classes.submit}
-              >
-                Sign In
-              </Button>
-            </Loc>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+            >
+              Sign In
+            </Button>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
