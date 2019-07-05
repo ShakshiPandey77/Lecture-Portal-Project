@@ -8,6 +8,8 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import { Select,Input,MenuItem,FormHelperText, FormControl} from '@material-ui/core';
+import {Link as Loc} from 'react-router-dom';
 
 
 const useStyles = makeStyles(theme => ({
@@ -49,6 +51,17 @@ const useStyles = makeStyles(theme => ({
 
 export default function Signin() {
   const classes = useStyles();
+
+  const [values, setValues] = React.useState({
+    type : 'student'
+  });
+
+  const handleChange = (event) => {
+    setValues(oldValues => ({
+      ...oldValues,
+      [event.target.name]: event.target.value,
+    }));
+  };
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -94,15 +107,30 @@ export default function Signin() {
               id="password"
               autoComplete="current-password"
             />
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-            >
-              Sign In
-            </Button>
+            <FormControl>
+              <Select
+                value={values.type}
+                onChange={handleChange}
+                input={<Input name="type" id="user-type" />}
+              >
+                <MenuItem value='admin'>Admin</MenuItem>
+                <MenuItem value='dept'>Department</MenuItem>
+                <MenuItem value='lecturer'>Lecturer</MenuItem>
+                <MenuItem value='student'>Student</MenuItem>
+              </Select>
+              <FormHelperText>Select user type</FormHelperText>
+            </FormControl>
+            <Loc to={"/student"}>
+              <Button
+                type="submit"
+                fullWidth
+                variant="contained"
+                color="primary"
+                className={classes.submit}
+              >
+                Sign In
+              </Button>
+            </Loc>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
