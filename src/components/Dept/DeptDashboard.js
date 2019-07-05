@@ -12,9 +12,9 @@ import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Link from '@material-ui/core/Link';
+// import Grid from '@material-ui/core/Grid';
+// import Paper from '@material-ui/core/Paper';
+// import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -29,7 +29,7 @@ import Logout from '@material-ui/icons/Input';
 // import Chart from './Chart';
 // import Deposits from './Deposits';
 // import Orders from './Orders';
-import { mainListItems, secondaryListItems } from './DeptNavList';
+import  MainListItems from './DeptNavList';
 
 function MadeWithLove() {
 return (
@@ -156,6 +156,7 @@ overflow: 'auto',
 container: {
 paddingTop: theme.spacing(4),
 paddingBottom: theme.spacing(4),
+minHeight: '700px'
 },
 paper: {
 padding: theme.spacing(24),
@@ -295,33 +296,27 @@ return (
     </div>
     <Typography class={classes.admin}>Department</Typography>
     <Divider />
-    <List>{mainListItems}</List>
-     {/* <Divider />
-    <List>{secondaryListItems}</List>  */}
+    <MainListItems/>
   </Drawer> 
+
+  
 <main className={classes.content}>
     <div className={classes.appBarSpacer} />
     <Container maxWidth="lg" className={classes.container}>
-      <Grid container spacing={3}>
-        {/* Chart */}
+      {/* <Grid container spacing={3}>
          <Grid item xs={12} md={8} lg={9}>
           <Paper className={fixedHeightPaper}> 
-            {/* <Chart /> */}
        </Paper>
         </Grid> 
-       
         <Grid item xs={12} md={4} lg={3}>
           <Paper className={fixedHeightPaper}> 
-             {/* <Deposits />  */}
            </Paper>
         </Grid> 
-        {/* Recent Orders */}
          <Grid item xs={12}>
           <Paper className={classes.paper}> 
-            {/* <Orders /> */}
         </Paper>
         </Grid>
-      </Grid>
+      </Grid> */}
     </Container>
     <footer className={classes.footer}>
         <Container maxWidth="sm">
